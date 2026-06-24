@@ -1,0 +1,17 @@
+name: Docker Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  docker-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Test Docker
+        run: docker --version
