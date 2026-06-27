@@ -1,4 +1,4 @@
-name: Docker CI
+name: Docker CI/CD
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  docker-build:
+  docker-build-push:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,4 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t test-image .
+        run: docker build -t komalsahani/my-first-image:latest .
+
+      - name: Push Docker image
+        run: docker push komalsahani/my-first-image:latest
