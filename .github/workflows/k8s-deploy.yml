@@ -27,6 +27,6 @@ jobs:
     - name: Push image
       run: docker push komalsahani/devops-nginx:latest
 
-    - name: Deploy to Kubernetes
-      run: |
-        kubectl set image deployment/nginx-deployment nginx=komalsahani/devops-nginx:latest
+    Docker build
+Docker login
+Docker push
