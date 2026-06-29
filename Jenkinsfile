@@ -2,15 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Hello') {
             steps {
-                echo 'Getting code from GitHub...'
+                echo 'Hello Komal! 🚀'
             }
         }
 
         stage('Build') {
             steps {
-                echo 'Building Docker image...'
+                echo 'Building application...'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
             }
         }
 
